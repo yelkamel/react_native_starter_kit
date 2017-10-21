@@ -1,6 +1,6 @@
-import Config from 'react-native-config';
+import env from 'utils/env';
 
-const { API } = Config;
+const { API } = env;
 const defaultHeaders = {
   Accept: 'application/json',
   'Content-Type': 'application/json',

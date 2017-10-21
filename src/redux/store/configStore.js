@@ -3,13 +3,13 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { createLogger } from 'redux-logger';
 import { persistStore, autoRehydrate, purgeStoredState } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
-import Config from 'react-native-config';
+import env from 'utils/env';
 
 import rootReducer from './indexReducers';
 import rootSaga from './rootSaga';
 
 // Env
-const { PERSIST_ENABLED, PERSIST_PURGE, ENV } = Config;
+const { PERSIST_ENABLED, PERSIST_PURGE, ENV } = env;
 
 // Common Middlewares
 const sagaMiddleware = createSagaMiddleware();
